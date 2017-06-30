@@ -85,36 +85,44 @@ class ViewController: NSViewController {
     }
     
     func generateImages() {
-        // MAC
-        DispatchQueue.main.async { self.image016A.image = self.image.resize(  16,  16); self.image016A.image?.saveToDownloads("appicon_mac_016pts_1X.png") }
-        DispatchQueue.main.async { self.image016B.image = self.image.resize(  32,  32); self.image016B.image?.saveToDownloads("appicon_mac_016pts_2X.png") }
-        DispatchQueue.main.async { self.image032A.image = self.image.resize(  32,  32); self.image032A.image?.saveToDownloads("appicon_mac_032pts_1X.png") }
-        DispatchQueue.main.async { self.image032B.image = self.image.resize(  64,  64); self.image032B.image?.saveToDownloads("appicon_mac_032pts_2X.png") }
-        DispatchQueue.main.async { self.image128A.image = self.image.resize( 128, 128); self.image128A.image?.saveToDownloads("appicon_mac_128pts_1X.png") }
-        DispatchQueue.main.async { self.image128B.image = self.image.resize( 256, 256); self.image128B.image?.saveToDownloads("appicon_mac_128pts_2X.png") }
-        DispatchQueue.main.async { self.image256A.image = self.image.resize( 256, 256); self.image256A.image?.saveToDownloads("appicon_mac_256pts_1X.png") }
-        DispatchQueue.main.async { self.image256B.image = self.image.resize( 512, 512); self.image256B.image?.saveToDownloads("appicon_mac_256pts_2X.png") }
-        DispatchQueue.main.async { self.image512A.image = self.image.resize( 512, 512); self.image512A.image?.saveToDownloads("appicon_mac_512pts_1X.png") }
-        DispatchQueue.main.async { self.image512B.image = self.image.resize(1024,1024); self.image512B.image?.saveToDownloads("appicon_mac_512pts_2X.png") }
-        // IOS
-        DispatchQueue.main.async { self.imageI01A.image = self.image.resize(  40,  40); self.image016A.image?.saveToDownloads("appicon_iphone_020pts_2X.png") }
-        DispatchQueue.main.async { self.imageI01B.image = self.image.resize(  60,  60); self.image016B.image?.saveToDownloads("appicon_iphone_020pts_3X.png") }
-        DispatchQueue.main.async { self.imageI02A.image = self.image.resize(  58,  58); self.image032A.image?.saveToDownloads("appicon_iphone_029pts_2X.png") }
-        DispatchQueue.main.async { self.imageI02B.image = self.image.resize(  87,  87); self.image032B.image?.saveToDownloads("appicon_iphone_029pts_3X.png") }
-        DispatchQueue.main.async { self.imageI03A.image = self.image.resize(  80,  80); self.image128A.image?.saveToDownloads("appicon_iphone_040pts_2X.png") }
-        DispatchQueue.main.async { self.imageI03B.image = self.image.resize( 120, 120); self.image128B.image?.saveToDownloads("appicon_iphone_040pts_3X.png") }
-        DispatchQueue.main.async { self.imageI04A.image = self.image.resize( 120, 120); self.image256A.image?.saveToDownloads("appicon_iphone_060pts_2X.png") }
-        DispatchQueue.main.async { self.imageI04B.image = self.image.resize( 180, 180); self.image256B.image?.saveToDownloads("appicon_iphone_060pts_3X.png") }
-        DispatchQueue.main.async { self.imageI05A.image = self.image.resize(  20,  20); self.image512A.image?.saveToDownloads("appicon_ipad_020pts_1X.png") }
-        DispatchQueue.main.async { self.imageI05B.image = self.image.resize(  40,  40); self.image512B.image?.saveToDownloads("appicon_ipad_020pts_2X.png") }
-        DispatchQueue.main.async { self.imageI06A.image = self.image.resize(  29,  29); self.image512A.image?.saveToDownloads("appicon_ipad_029pts_1X.png") }
-        DispatchQueue.main.async { self.imageI06B.image = self.image.resize(  58,  58); self.image512B.image?.saveToDownloads("appicon_ipad_029pts_2X.png") }
-        DispatchQueue.main.async { self.imageI07A.image = self.image.resize(  40,  40); self.image512A.image?.saveToDownloads("appicon_ipad_040pts_1X.png") }
-        DispatchQueue.main.async { self.imageI07B.image = self.image.resize(  80,  80); self.image512B.image?.saveToDownloads("appicon_ipad_040pts_2X.png") }
-        DispatchQueue.main.async { self.imageI08A.image = self.image.resize(  76,  76); self.image512A.image?.saveToDownloads("appicon_ipad_076pts_1X.png") }
-        DispatchQueue.main.async { self.imageI08B.image = self.image.resize( 152, 152); self.image512B.image?.saveToDownloads("appicon_ipad_076pts_2X.png") }
-        DispatchQueue.main.async { self.imageI09A.image = self.image.resize(  84,  84); self.image512A.image?.saveToDownloads("appicon_ipad_083pts_1X.png") }
-        DispatchQueue.main.async { self.imageI09B.image = self.image.resize( 167, 167); self.image512B.image?.saveToDownloads("appicon_ipad_083pts_2X.png") }
+        guard let selectedItem = tabView.selectedTabViewItem else { return }
+        let index = tabView.indexOfTabViewItem(selectedItem)
+        switch index {
+        case 0:
+            // MAC
+            DispatchQueue.main.async { self.image016A.image = self.image.resize(  16,  16); self.image016A.image?.saveToDownloads("appicon_mac_016pts_1X.png") }
+            DispatchQueue.main.async { self.image016B.image = self.image.resize(  32,  32); self.image016B.image?.saveToDownloads("appicon_mac_016pts_2X.png") }
+            DispatchQueue.main.async { self.image032A.image = self.image.resize(  32,  32); self.image032A.image?.saveToDownloads("appicon_mac_032pts_1X.png") }
+            DispatchQueue.main.async { self.image032B.image = self.image.resize(  64,  64); self.image032B.image?.saveToDownloads("appicon_mac_032pts_2X.png") }
+            DispatchQueue.main.async { self.image128A.image = self.image.resize( 128, 128); self.image128A.image?.saveToDownloads("appicon_mac_128pts_1X.png") }
+            DispatchQueue.main.async { self.image128B.image = self.image.resize( 256, 256); self.image128B.image?.saveToDownloads("appicon_mac_128pts_2X.png") }
+            DispatchQueue.main.async { self.image256A.image = self.image.resize( 256, 256); self.image256A.image?.saveToDownloads("appicon_mac_256pts_1X.png") }
+            DispatchQueue.main.async { self.image256B.image = self.image.resize( 512, 512); self.image256B.image?.saveToDownloads("appicon_mac_256pts_2X.png") }
+            DispatchQueue.main.async { self.image512A.image = self.image.resize( 512, 512); self.image512A.image?.saveToDownloads("appicon_mac_512pts_1X.png") }
+            DispatchQueue.main.async { self.image512B.image = self.image.resize(1024,1024); self.image512B.image?.saveToDownloads("appicon_mac_512pts_2X.png") }
+        case 1:
+            // iOS
+            DispatchQueue.main.async { self.imageI01A.image = self.image.resize(  40,  40); self.image016A.image?.saveToDownloads("appicon_iphone_020pts_2X.png") }
+            DispatchQueue.main.async { self.imageI01B.image = self.image.resize(  60,  60); self.image016B.image?.saveToDownloads("appicon_iphone_020pts_3X.png") }
+            DispatchQueue.main.async { self.imageI02A.image = self.image.resize(  58,  58); self.image032A.image?.saveToDownloads("appicon_iphone_029pts_2X.png") }
+            DispatchQueue.main.async { self.imageI02B.image = self.image.resize(  87,  87); self.image032B.image?.saveToDownloads("appicon_iphone_029pts_3X.png") }
+            DispatchQueue.main.async { self.imageI03A.image = self.image.resize(  80,  80); self.image128A.image?.saveToDownloads("appicon_iphone_040pts_2X.png") }
+            DispatchQueue.main.async { self.imageI03B.image = self.image.resize( 120, 120); self.image128B.image?.saveToDownloads("appicon_iphone_040pts_3X.png") }
+            DispatchQueue.main.async { self.imageI04A.image = self.image.resize( 120, 120); self.image256A.image?.saveToDownloads("appicon_iphone_060pts_2X.png") }
+            DispatchQueue.main.async { self.imageI04B.image = self.image.resize( 180, 180); self.image256B.image?.saveToDownloads("appicon_iphone_060pts_3X.png") }
+            DispatchQueue.main.async { self.imageI05A.image = self.image.resize(  20,  20); self.image512A.image?.saveToDownloads("appicon_ipad_020pts_1X.png") }
+            DispatchQueue.main.async { self.imageI05B.image = self.image.resize(  40,  40); self.image512B.image?.saveToDownloads("appicon_ipad_020pts_2X.png") }
+            DispatchQueue.main.async { self.imageI06A.image = self.image.resize(  29,  29); self.image512A.image?.saveToDownloads("appicon_ipad_029pts_1X.png") }
+            DispatchQueue.main.async { self.imageI06B.image = self.image.resize(  58,  58); self.image512B.image?.saveToDownloads("appicon_ipad_029pts_2X.png") }
+            DispatchQueue.main.async { self.imageI07A.image = self.image.resize(  40,  40); self.image512A.image?.saveToDownloads("appicon_ipad_040pts_1X.png") }
+            DispatchQueue.main.async { self.imageI07B.image = self.image.resize(  80,  80); self.image512B.image?.saveToDownloads("appicon_ipad_040pts_2X.png") }
+            DispatchQueue.main.async { self.imageI08A.image = self.image.resize(  76,  76); self.image512A.image?.saveToDownloads("appicon_ipad_076pts_1X.png") }
+            DispatchQueue.main.async { self.imageI08B.image = self.image.resize( 152, 152); self.image512B.image?.saveToDownloads("appicon_ipad_076pts_2X.png") }
+            DispatchQueue.main.async { self.imageI09A.image = self.image.resize(  84,  84); self.image512A.image?.saveToDownloads("appicon_ipad_083pts_1X.png") }
+            DispatchQueue.main.async { self.imageI09B.image = self.image.resize( 167, 167); self.image512B.image?.saveToDownloads("appicon_ipad_083pts_2X.png") }
+        default:
+            break
+        }
         
         buttonFolder.isHidden = false
     }
