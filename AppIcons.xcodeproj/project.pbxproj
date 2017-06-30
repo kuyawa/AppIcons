@@ -7,13 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DB19DC91F06CE23001AB08D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB19DC81F06CE23001AB08D /* Utilities.swift */; };
+		2DB19DCB1F06CE82001AB08D /* UtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB19DCA1F06CE82001AB08D /* UtilitiesTests.swift */; };
+		2DB19DCC1F06CEA1001AB08D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB19DC81F06CE23001AB08D /* Utilities.swift */; };
+		2DB19DCE1F06D3A5001AB08D /* IconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB19DCD1F06D3A5001AB08D /* IconImageView.swift */; };
 		F40063771F05B3C30019C0FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40063761F05B3C30019C0FE /* AppDelegate.swift */; };
 		F40063791F05B3C30019C0FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40063781F05B3C30019C0FE /* ViewController.swift */; };
 		F400637B1F05B3C30019C0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F400637A1F05B3C30019C0FE /* Assets.xcassets */; };
 		F400637E1F05B3C30019C0FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F400637C1F05B3C30019C0FE /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2DB19DC11F06C6E5001AB08D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F400636B1F05B3C30019C0FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F40063721F05B3C30019C0FE;
+			remoteInfo = AppIcons;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		2DB19DBC1F06C6E5001AB08D /* AppIconsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppIconsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DB19DC01F06C6E5001AB08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DB19DC81F06CE23001AB08D /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		2DB19DCA1F06CE82001AB08D /* UtilitiesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilitiesTests.swift; sourceTree = "<group>"; };
+		2DB19DCD1F06D3A5001AB08D /* IconImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconImageView.swift; sourceTree = "<group>"; };
 		F40063731F05B3C30019C0FE /* AppIcons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppIcons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40063761F05B3C30019C0FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F40063781F05B3C30019C0FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
@@ -24,6 +43,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2DB19DB91F06C6E5001AB08D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F40063701F05B3C30019C0FE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -34,11 +60,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DB19DBD1F06C6E5001AB08D /* AppIconsTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DB19DC01F06C6E5001AB08D /* Info.plist */,
+				2DB19DCA1F06CE82001AB08D /* UtilitiesTests.swift */,
+			);
+			path = AppIconsTests;
+			sourceTree = "<group>";
+		};
 		F400636A1F05B3C30019C0FE = {
 			isa = PBXGroup;
 			children = (
 				F40063851F05EF960019C0FE /* Readme.md */,
 				F40063751F05B3C30019C0FE /* AppIcons */,
+				2DB19DBD1F06C6E5001AB08D /* AppIconsTests */,
 				F40063741F05B3C30019C0FE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				F40063731F05B3C30019C0FE /* AppIcons.app */,
+				2DB19DBC1F06C6E5001AB08D /* AppIconsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,6 +94,8 @@
 				F400637F1F05B3C30019C0FE /* Info.plist */,
 				F40063761F05B3C30019C0FE /* AppDelegate.swift */,
 				F40063781F05B3C30019C0FE /* ViewController.swift */,
+				2DB19DC81F06CE23001AB08D /* Utilities.swift */,
+				2DB19DCD1F06D3A5001AB08D /* IconImageView.swift */,
 				F400637C1F05B3C30019C0FE /* Main.storyboard */,
 				F400637A1F05B3C30019C0FE /* Assets.xcassets */,
 			);
@@ -66,6 +105,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2DB19DBB1F06C6E5001AB08D /* AppIconsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DB19DC51F06C6E5001AB08D /* Build configuration list for PBXNativeTarget "AppIconsTests" */;
+			buildPhases = (
+				2DB19DB81F06C6E5001AB08D /* Sources */,
+				2DB19DB91F06C6E5001AB08D /* Frameworks */,
+				2DB19DBA1F06C6E5001AB08D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DB19DC21F06C6E5001AB08D /* PBXTargetDependency */,
+			);
+			name = AppIconsTests;
+			productName = AppIconsTests;
+			productReference = 2DB19DBC1F06C6E5001AB08D /* AppIconsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F40063721F05B3C30019C0FE /* AppIcons */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F40063821F05B3C30019C0FE /* Build configuration list for PBXNativeTarget "AppIcons" */;
@@ -93,6 +150,12 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Armonia;
 				TargetAttributes = {
+					2DB19DBB1F06C6E5001AB08D = {
+						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F40063721F05B3C30019C0FE;
+					};
 					F40063721F05B3C30019C0FE = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = W7PMV9XFGM;
@@ -114,11 +177,19 @@
 			projectRoot = "";
 			targets = (
 				F40063721F05B3C30019C0FE /* AppIcons */,
+				2DB19DBB1F06C6E5001AB08D /* AppIconsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2DB19DBA1F06C6E5001AB08D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F40063711F05B3C30019C0FE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,16 +202,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2DB19DB81F06C6E5001AB08D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB19DCC1F06CEA1001AB08D /* Utilities.swift in Sources */,
+				2DB19DCB1F06CE82001AB08D /* UtilitiesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F400636F1F05B3C30019C0FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB19DC91F06CE23001AB08D /* Utilities.swift in Sources */,
+				2DB19DCE1F06D3A5001AB08D /* IconImageView.swift in Sources */,
 				F40063791F05B3C30019C0FE /* ViewController.swift in Sources */,
 				F40063771F05B3C30019C0FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DB19DC21F06C6E5001AB08D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F40063721F05B3C30019C0FE /* AppIcons */;
+			targetProxy = 2DB19DC11F06C6E5001AB08D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F400637C1F05B3C30019C0FE /* Main.storyboard */ = {
@@ -154,6 +244,37 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2DB19DC31F06C6E5001AB08D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AppIconsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Armonia.AppIconsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppIcons.app/Contents/MacOS/AppIcons";
+			};
+			name = Debug;
+		};
+		2DB19DC41F06C6E5001AB08D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AppIconsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Armonia.AppIconsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppIcons.app/Contents/MacOS/AppIcons";
+			};
+			name = Release;
+		};
 		F40063801F05B3C30019C0FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -277,6 +398,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2DB19DC51F06C6E5001AB08D /* Build configuration list for PBXNativeTarget "AppIconsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DB19DC31F06C6E5001AB08D /* Debug */,
+				2DB19DC41F06C6E5001AB08D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F400636E1F05B3C30019C0FE /* Build configuration list for PBXProject "AppIcons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -293,6 +423,7 @@
 				F40063841F05B3C30019C0FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
