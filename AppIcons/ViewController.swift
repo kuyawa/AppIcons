@@ -142,7 +142,8 @@ class ViewController: NSViewController {
         if action == 1 {
             // Generate Contents.json
             if let source = Bundle.main.url(forResource: "Contents_ios", withExtension: "json") {
-                try? FileManager.default.copyItem(at: source, to: json)
+                try? FileManager.default.removeItem(at: json)           // Remove
+                try? FileManager.default.copyItem(at: source, to: json) // Create
             }
             
             // Save ios icons
@@ -167,7 +168,8 @@ class ViewController: NSViewController {
         } else {
             // Generate Contents.json
             if let source = Bundle.main.url(forResource: "Contents_mac", withExtension: "json") {
-                try? FileManager.default.copyItem(at: source, to: json)
+                try? FileManager.default.removeItem(at: json)           // Remove
+                try? FileManager.default.copyItem(at: source, to: json) // Create
             }
             
             // Save mac icons
