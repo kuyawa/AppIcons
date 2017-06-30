@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DB19DC91F06CE23001AB08D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB19DC81F06CE23001AB08D /* Utilities.swift */; };
+		2DB19DCB1F06CE82001AB08D /* UtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB19DCA1F06CE82001AB08D /* UtilitiesTests.swift */; };
+		2DB19DCC1F06CEA1001AB08D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB19DC81F06CE23001AB08D /* Utilities.swift */; };
 		F40063771F05B3C30019C0FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40063761F05B3C30019C0FE /* AppDelegate.swift */; };
 		F40063791F05B3C30019C0FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40063781F05B3C30019C0FE /* ViewController.swift */; };
 		F400637B1F05B3C30019C0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F400637A1F05B3C30019C0FE /* Assets.xcassets */; };
@@ -26,6 +29,8 @@
 /* Begin PBXFileReference section */
 		2DB19DBC1F06C6E5001AB08D /* AppIconsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppIconsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB19DC01F06C6E5001AB08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DB19DC81F06CE23001AB08D /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		2DB19DCA1F06CE82001AB08D /* UtilitiesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilitiesTests.swift; sourceTree = "<group>"; };
 		F40063731F05B3C30019C0FE /* AppIcons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppIcons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40063761F05B3C30019C0FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F40063781F05B3C30019C0FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
@@ -57,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				2DB19DC01F06C6E5001AB08D /* Info.plist */,
+				2DB19DCA1F06CE82001AB08D /* UtilitiesTests.swift */,
 			);
 			path = AppIconsTests;
 			sourceTree = "<group>";
@@ -86,6 +92,7 @@
 				F400637F1F05B3C30019C0FE /* Info.plist */,
 				F40063761F05B3C30019C0FE /* AppDelegate.swift */,
 				F40063781F05B3C30019C0FE /* ViewController.swift */,
+				2DB19DC81F06CE23001AB08D /* Utilities.swift */,
 				F400637C1F05B3C30019C0FE /* Main.storyboard */,
 				F400637A1F05B3C30019C0FE /* Assets.xcassets */,
 			);
@@ -142,6 +149,7 @@
 				TargetAttributes = {
 					2DB19DBB1F06C6E5001AB08D = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F40063721F05B3C30019C0FE;
 					};
@@ -195,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB19DCC1F06CEA1001AB08D /* Utilities.swift in Sources */,
+				2DB19DCB1F06CE82001AB08D /* UtilitiesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB19DC91F06CE23001AB08D /* Utilities.swift in Sources */,
 				F40063791F05B3C30019C0FE /* ViewController.swift in Sources */,
 				F40063771F05B3C30019C0FE /* AppDelegate.swift in Sources */,
 			);
@@ -233,11 +244,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AppIconsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Armonia.AppIconsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppIcons.app/Contents/MacOS/AppIcons";
 			};
@@ -247,6 +260,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AppIconsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -387,6 +401,7 @@
 				2DB19DC41F06C6E5001AB08D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F400636E1F05B3C30019C0FE /* Build configuration list for PBXProject "AppIcons" */ = {
 			isa = XCConfigurationList;
