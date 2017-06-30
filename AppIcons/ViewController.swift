@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import CoreGraphics
 
 class ViewController: NSViewController {
 
@@ -140,17 +141,15 @@ extension NSImage {
         return bitmapImage.representation(using: .PNG, properties: [:])
     }
     
-    func resize(_ width: CGFloat, _ height: CGFloat) -> NSImage {
-        let img = NSImage(size: CGSize(width: width, height: height))
-        img.lockFocus()
-        let ctx = NSGraphicsContext.current()
-        ctx?.imageInterpolation = .high
-        let oldRect = NSMakeRect(0, 0, size.width, size.height)
-        let newRect = NSMakeRect(0, 0, width, height)
-        self.draw(in: newRect, from: oldRect, operation: .copy, fraction: 1)
-        img.unlockFocus()
-        
-        return img
+    func resize(_ width: CGFloat, _ height: CGFloat) -> NSImage? {
+        let imageWidth  = Int(width)
+        let imageHeight = Int(height)
+        let newRect = NSMakeRect(0.0, 0.0, width, height)
+        guard let ctx = CGContext(data: nil, width: imageWidth, height: imageHeight, bitsPerComponent: 8, bytesPerRow: 8 * 3 * imageWidth, space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue) else { return nil }
+        guard let cgImage = self.cgImage(forProposedRect: nil, context: NSGraphicsContext.current(), hints: nil) else { return nil }
+        ctx.draw(cgImage, in: newRect)
+        guard let img = ctx.makeImage() else { return nil }
+        return NSImage(cgImage: img, size: newRect.size)
     }
     
     @discardableResult
