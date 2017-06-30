@@ -774,7 +774,7 @@ a 512x512 image</string>
                                             </textFieldCell>
                                         </textField>
                                         <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SsD-eF-kdB">
-                                            <rect key="frame" x="14" y="13" width="180" height="32"/>
+                                            <rect key="frame" x="14" y="47" width="180" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <buttonCell key="cell" type="push" title="Open folder" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iQr-9X-lCu">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -798,6 +798,17 @@ a 512x512 image</string>
                                                 <action selector="onIconType:" target="XfG-lQ-9wD" id="qVP-Cl-jtF"/>
                                             </connections>
                                         </segmentedControl>
+                                        <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uvK-oi-Eev">
+                                            <rect key="frame" x="14" y="13" width="180" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Export Icons" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TjB-8Q-b6N">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="onExport:" target="XfG-lQ-9wD" id="7K6-yb-1QT"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <color key="borderColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -815,7 +826,7 @@ a 512x512 image</string>
                                             <font key="font" metaFont="system"/>
                                             <tabViewItems>
                                                 <tabViewItem label="macOS" identifier="1" id="p9R-KA-H4w">
-                                                    <view key="view" id="vnz-L7-HUd">
+                                                    <view key="view" ambiguous="YES" id="vnz-L7-HUd">
                                                         <rect key="frame" x="0.0" y="0.0" width="790" height="530"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
@@ -864,58 +875,6 @@ a 512x512 image</string>
                                                                         <rect key="frame" x="58" y="11" width="84" height="17"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Mac 16pt" id="mVt-O0-Rym">
-                                                                            <font key="font" metaFont="smallSystem"/>
-                                                                            <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                        </textFieldCell>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </customView>
-                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0tb-9x-u6P">
-                                                                <rect key="frame" x="173" y="171" width="200" height="140"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                <subviews>
-                                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="br4-wI-nnx">
-                                                                        <rect key="frame" x="21" y="55" width="74" height="74"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="dotted" id="lm4-eY-mxX"/>
-                                                                    </imageView>
-                                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Rk-fu-zbG">
-                                                                        <rect key="frame" x="103" y="55" width="74" height="74"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="dotted" id="dnf-w6-aU6"/>
-                                                                    </imageView>
-                                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7c-sz-Qh1">
-                                                                        <rect key="frame" x="40" y="40" width="37" height="14"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="1x" id="bfB-Ap-OzL">
-                                                                            <font key="font" metaFont="smallSystem"/>
-                                                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                        </textFieldCell>
-                                                                    </textField>
-                                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-lj-FMf">
-                                                                        <rect key="frame" x="122" y="40" width="37" height="14"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2x" id="e42-Gf-Jjo">
-                                                                            <font key="font" metaFont="smallSystem"/>
-                                                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                        </textFieldCell>
-                                                                    </textField>
-                                                                    <box fixedFrame="YES" boxType="custom" borderType="line" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="MD9-gq-ygU">
-                                                                        <rect key="frame" x="12" y="34" width="177" height="1"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                        <view key="contentView" ambiguous="YES" id="Gky-V7-H16">
-                                                                            <rect key="frame" x="1" y="1" width="175" height="0.0"/>
-                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                        </view>
-                                                                        <color key="borderColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </box>
-                                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w79-b5-PwF">
-                                                                        <rect key="frame" x="58" y="11" width="84" height="17"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Mac 256pt" id="Hqh-Cj-5ga">
                                                                             <font key="font" metaFont="smallSystem"/>
                                                                             <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1027,6 +986,58 @@ a 512x512 image</string>
                                                                     </textField>
                                                                 </subviews>
                                                             </customView>
+                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0tb-9x-u6P">
+                                                                <rect key="frame" x="173" y="171" width="200" height="140"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <subviews>
+                                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="br4-wI-nnx">
+                                                                        <rect key="frame" x="21" y="55" width="74" height="74"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="dotted" id="lm4-eY-mxX"/>
+                                                                    </imageView>
+                                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Rk-fu-zbG">
+                                                                        <rect key="frame" x="103" y="55" width="74" height="74"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="dotted" id="dnf-w6-aU6"/>
+                                                                    </imageView>
+                                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7c-sz-Qh1">
+                                                                        <rect key="frame" x="40" y="40" width="37" height="14"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="1x" id="bfB-Ap-OzL">
+                                                                            <font key="font" metaFont="smallSystem"/>
+                                                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                        </textFieldCell>
+                                                                    </textField>
+                                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-lj-FMf">
+                                                                        <rect key="frame" x="122" y="40" width="37" height="14"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2x" id="e42-Gf-Jjo">
+                                                                            <font key="font" metaFont="smallSystem"/>
+                                                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                        </textFieldCell>
+                                                                    </textField>
+                                                                    <box fixedFrame="YES" boxType="custom" borderType="line" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="MD9-gq-ygU">
+                                                                        <rect key="frame" x="12" y="34" width="177" height="1"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                        <view key="contentView" ambiguous="YES" id="Gky-V7-H16">
+                                                                            <rect key="frame" x="1" y="1" width="175" height="0.0"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        </view>
+                                                                        <color key="borderColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </box>
+                                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w79-b5-PwF">
+                                                                        <rect key="frame" x="58" y="11" width="84" height="17"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Mac 256pt" id="Hqh-Cj-5ga">
+                                                                            <font key="font" metaFont="smallSystem"/>
+                                                                            <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                        </textFieldCell>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </customView>
                                                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efW-gq-n8P">
                                                                 <rect key="frame" x="427" y="171" width="200" height="140"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
@@ -1083,7 +1094,7 @@ a 512x512 image</string>
                                                     </view>
                                                 </tabViewItem>
                                                 <tabViewItem label="iOS" identifier="2" id="Ijk-KU-Mw0">
-                                                    <view key="view" ambiguous="YES" id="jHn-d5-YQB">
+                                                    <view key="view" id="jHn-d5-YQB">
                                                         <rect key="frame" x="0.0" y="0.0" width="790" height="530"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
@@ -1567,6 +1578,7 @@ a 512x512 image</string>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="buttonExport" destination="uvK-oi-Eev" id="HNZ-w1-U23"/>
                         <outlet property="buttonFolder" destination="SsD-eF-kdB" id="kl8-KH-TKu"/>
                         <outlet property="image016A" destination="dRd-vQ-yBv" id="yfk-cP-usa"/>
                         <outlet property="image016B" destination="iWj-us-wnf" id="HqG-Xy-JLR"/>

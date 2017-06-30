@@ -1,0 +1,110 @@
+{
+    "info" : {
+        "version" : 1,
+        "author"  : "xcode"
+    },
+    "images" : [
+        {
+            "idiom" : "iphone",
+            "size"  : "20x20",
+            "scale" : "2x",
+            "filename" : "iphone020pts2x.png"
+        },
+        {
+            "idiom" : "iphone",
+            "size"  : "20x20",
+            "scale" : "3x",
+            "filename" : "iphone020pts3x.png"
+        },
+        {
+            "idiom" : "iphone",
+            "size"  : "29x29",
+            "scale" : "2x",
+            "filename" : "iphone029pts2x.png"
+        },
+        {
+            "idiom" : "iphone",
+            "size"  : "29x29",
+            "scale" : "3x",
+            "filename" : "iphone029pts3x.png"
+        },
+        {
+            "idiom" : "iphone",
+            "size"  : "40x40",
+            "scale" : "2x",
+            "filename" : "iphone040pts2x.png"
+        },
+        {
+            "idiom" : "iphone",
+            "size"  : "40x40",
+            "scale" : "3x",
+            "filename" : "iphone040pts3x.png"
+        },
+        {
+            "idiom" : "iphone",
+            "size"  : "60x60",
+            "scale" : "2x",
+            "filename" : "iphone060pts2x.png"
+        },
+        {
+            "idiom" : "iphone",
+            "size"  : "60x60",
+            "scale" : "3x",
+            "filename" : "iphone060pts3x.png"
+        },
+        {
+            "idiom" : "ipad",
+            "size"  : "20x20",
+            "scale" : "1x",
+            "filename" : "ipad020pts1x.png"
+        },
+        {
+            "idiom" : "ipad",
+            "size"  : "20x20",
+            "scale" : "2x",
+            "filename" : "ipad020pts1x.png"
+        },
+        {
+            "idiom" : "ipad",
+            "size"  : "29x29",
+            "scale" : "1x",
+            "filename" : "ipad029pts1x.png"
+        },
+        {
+            "idiom" : "ipad",
+            "size"  : "29x29",
+            "scale" : "2x",
+            "filename" : "ipad029pts2x.png"
+        },
+        {
+            "idiom" : "ipad",
+            "size"  : "40x40",
+            "scale" : "1x",
+            "filename" : "ipad040pts1x.png"
+        },
+        {
+            "idiom" : "ipad",
+            "size"  : "40x40",
+            "scale" : "2x",
+            "filename" : "ipad040pts2x.png"
+        },
+        {
+            "idiom" : "ipad",
+            "size"  : "76x76",
+            "scale" : "1x",
+            "filename" : "ipad076pts1x.png"
+        },
+        {
+            "idiom" : "ipad",
+            "size"  : "76x76",
+            "scale" : "2x",
+            "filename" : "ipad076pts2x.png"
+        },
+        {
+            "idiom" : "ipad",
+            "size"  : "83.5x83.5",
+            "scale" : "2x",
+            "filename" : "ipad083pts2x.png"
+        }
+    ]
+}

@@ -8,3 +8,4 @@ AppIcons is a tool for generating icons in all sizes as required by macOS and iO
 
 - Version 1: macOS icons
 - Version 2: iOS icons
+- Version 3: Export icons to .xcassets folder

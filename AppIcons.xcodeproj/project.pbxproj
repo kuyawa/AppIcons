@@ -11,6 +11,8 @@
 		F40063791F05B3C30019C0FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40063781F05B3C30019C0FE /* ViewController.swift */; };
 		F400637B1F05B3C30019C0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F400637A1F05B3C30019C0FE /* Assets.xcassets */; };
 		F400637E1F05B3C30019C0FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F400637C1F05B3C30019C0FE /* Main.storyboard */; };
+		F402A7911F06EA9A00DCFFD8 /* Contents_mac.json in Resources */ = {isa = PBXBuildFile; fileRef = F402A7901F06EA9A00DCFFD8 /* Contents_mac.json */; };
+		F402A7931F06EAB000DCFFD8 /* Contents_ios.json in Resources */ = {isa = PBXBuildFile; fileRef = F402A7921F06EAB000DCFFD8 /* Contents_ios.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		F400637D1F05B3C30019C0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F400637F1F05B3C30019C0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F40063851F05EF960019C0FE /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		F402A7901F06EA9A00DCFFD8 /* Contents_mac.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents_mac.json; sourceTree = "<group>"; };
+		F402A7921F06EAB000DCFFD8 /* Contents_ios.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents_ios.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				F40063781F05B3C30019C0FE /* ViewController.swift */,
 				F400637C1F05B3C30019C0FE /* Main.storyboard */,
 				F400637A1F05B3C30019C0FE /* Assets.xcassets */,
+				F402A7901F06EA9A00DCFFD8 /* Contents_mac.json */,
+				F402A7921F06EAB000DCFFD8 /* Contents_ios.json */,
 			);
 			path = AppIcons;
 			sourceTree = "<group>";
@@ -124,7 +130,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F400637B1F05B3C30019C0FE /* Assets.xcassets in Resources */,
+				F402A7931F06EAB000DCFFD8 /* Contents_ios.json in Resources */,
 				F400637E1F05B3C30019C0FE /* Main.storyboard in Resources */,
+				F402A7911F06EA9A00DCFFD8 /* Contents_mac.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +301,7 @@
 				F40063841F05B3C30019C0FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
