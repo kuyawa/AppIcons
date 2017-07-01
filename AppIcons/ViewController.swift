@@ -87,8 +87,12 @@ class ViewController: NSViewController {
         let choice = dialog.runModal()
         
         if choice == NSFileHandlingPanelOKButton {
-            if let url = dialog.url {
-                exportIcons(url)
+            if let folder = dialog.url {
+                if action == 1 {
+                    saveIosIconset(folder)
+                } else {
+                    saveMacIconset(folder)
+                }
             }
         }
     }
@@ -100,52 +104,68 @@ class ViewController: NSViewController {
     }
     
     func generateImages() {
-        // MAC
-        DispatchQueue.main.async { self.image016A.image = self.image.resize(  16,  16); self.image016A.image?.saveToDownloads("mac016pts1x.png") }
-        DispatchQueue.main.async { self.image016B.image = self.image.resize(  32,  32); self.image016B.image?.saveToDownloads("mac016pts2x.png") }
-        DispatchQueue.main.async { self.image032A.image = self.image.resize(  32,  32); self.image032A.image?.saveToDownloads("mac032pts1x.png") }
-        DispatchQueue.main.async { self.image032B.image = self.image.resize(  64,  64); self.image032B.image?.saveToDownloads("mac032pts2x.png") }
-        DispatchQueue.main.async { self.image128A.image = self.image.resize( 128, 128); self.image128A.image?.saveToDownloads("mac128pts1x.png") }
-        DispatchQueue.main.async { self.image128B.image = self.image.resize( 256, 256); self.image128B.image?.saveToDownloads("mac128pts2x.png") }
-        DispatchQueue.main.async { self.image256A.image = self.image.resize( 256, 256); self.image256A.image?.saveToDownloads("mac256pts1x.png") }
-        DispatchQueue.main.async { self.image256B.image = self.image.resize( 512, 512); self.image256B.image?.saveToDownloads("mac256pts2x.png") }
-        DispatchQueue.main.async { self.image512A.image = self.image.resize( 512, 512); self.image512A.image?.saveToDownloads("mac512pts1x.png") }
-        DispatchQueue.main.async { self.image512B.image = self.image.resize(1024,1024); self.image512B.image?.saveToDownloads("mac512pts2x.png") }
-        // IOS
-        DispatchQueue.main.async { self.imageI01A.image = self.image.resize(  40,  40); self.image016A.image?.saveToDownloads("iphone020pts2x.png") }
-        DispatchQueue.main.async { self.imageI01B.image = self.image.resize(  60,  60); self.image016B.image?.saveToDownloads("iphone020pts3x.png") }
-        DispatchQueue.main.async { self.imageI02A.image = self.image.resize(  58,  58); self.image032A.image?.saveToDownloads("iphone029pts2x.png") }
-        DispatchQueue.main.async { self.imageI02B.image = self.image.resize(  87,  87); self.image032B.image?.saveToDownloads("iphone029pts3x.png") }
-        DispatchQueue.main.async { self.imageI03A.image = self.image.resize(  80,  80); self.image128A.image?.saveToDownloads("iphone040pts2x.png") }
-        DispatchQueue.main.async { self.imageI03B.image = self.image.resize( 120, 120); self.image128B.image?.saveToDownloads("iphone040pts3x.png") }
-        DispatchQueue.main.async { self.imageI04A.image = self.image.resize( 120, 120); self.image256A.image?.saveToDownloads("iphone060pts2x.png") }
-        DispatchQueue.main.async { self.imageI04B.image = self.image.resize( 180, 180); self.image256B.image?.saveToDownloads("iphone060pts3x.png") }
-        DispatchQueue.main.async { self.imageI05A.image = self.image.resize(  20,  20); self.image512A.image?.saveToDownloads("ipad020pts1x.png") }
-        DispatchQueue.main.async { self.imageI05B.image = self.image.resize(  40,  40); self.image512B.image?.saveToDownloads("ipad020pts2x.png") }
-        DispatchQueue.main.async { self.imageI06A.image = self.image.resize(  29,  29); self.image512A.image?.saveToDownloads("ipad029pts1x.png") }
-        DispatchQueue.main.async { self.imageI06B.image = self.image.resize(  58,  58); self.image512B.image?.saveToDownloads("ipad029pts2x.png") }
-        DispatchQueue.main.async { self.imageI07A.image = self.image.resize(  40,  40); self.image512A.image?.saveToDownloads("ipad040pts1x.png") }
-        DispatchQueue.main.async { self.imageI07B.image = self.image.resize(  80,  80); self.image512B.image?.saveToDownloads("ipad040pts2x.png") }
-        DispatchQueue.main.async { self.imageI08A.image = self.image.resize(  76,  76); self.image512A.image?.saveToDownloads("ipad076pts1x.png") }
-        DispatchQueue.main.async { self.imageI08B.image = self.image.resize( 152, 152); self.image512B.image?.saveToDownloads("ipad076pts2x.png") }
-        DispatchQueue.main.async { self.imageI09A.image = self.image.resize(  84,  84); self.image512A.image?.saveToDownloads("ipad083pts1x.png") }
-        DispatchQueue.main.async { self.imageI09B.image = self.image.resize( 167, 167); self.image512B.image?.saveToDownloads("ipad083pts2x.png") }
+        var folder = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
+        folder.appendPathComponent("AppIcon.appiconset", isDirectory: true)
+        var isFolder: ObjCBool = true
+        if !FileManager.default.fileExists(atPath: folder.path, isDirectory: &isFolder) {
+            try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: false, attributes: nil)
+        }
+        
+        // First generate all icons
+        DispatchQueue.main.async {
+            // macOS
+            self.image016A.image = self.image.resize(  16,  16);
+            self.image016B.image = self.image.resize(  32,  32);
+            self.image032A.image = self.image.resize(  32,  32);
+            self.image032B.image = self.image.resize(  64,  64);
+            self.image128A.image = self.image.resize( 128, 128);
+            self.image128B.image = self.image.resize( 256, 256);
+            self.image256A.image = self.image.resize( 256, 256);
+            self.image256B.image = self.image.resize( 512, 512);
+            self.image512A.image = self.image.resize( 512, 512);
+            self.image512B.image = self.image.resize(1024,1024);
+            // iOS
+            self.imageI01A.image = self.image.resize(  40,  40);
+            self.imageI01B.image = self.image.resize(  60,  60);
+            self.imageI02A.image = self.image.resize(  58,  58);
+            self.imageI02B.image = self.image.resize(  87,  87);
+            self.imageI03A.image = self.image.resize(  80,  80);
+            self.imageI03B.image = self.image.resize( 120, 120);
+            self.imageI04A.image = self.image.resize( 120, 120);
+            self.imageI04B.image = self.image.resize( 180, 180);
+            self.imageI05A.image = self.image.resize(  20,  20);
+            self.imageI05B.image = self.image.resize(  40,  40);
+            self.imageI06A.image = self.image.resize(  29,  29);
+            self.imageI06B.image = self.image.resize(  58,  58);
+            self.imageI07A.image = self.image.resize(  40,  40);
+            self.imageI07B.image = self.image.resize(  80,  80);
+            self.imageI08A.image = self.image.resize(  76,  76);
+            self.imageI08B.image = self.image.resize( 152, 152);
+            self.imageI09A.image = self.image.resize(  84,  84);
+            self.imageI09B.image = self.image.resize( 167, 167);
+        }
+        
+        // Then save only selected OS
+        if action == 1 {
+            saveIosIconset(folder)
+        } else {
+            saveMacIconset(folder)
+        }
         
         buttonFolder.isHidden = false
         buttonExport.isHidden = false
     }
     
-    func exportIcons(_ folder: URL) {
-        let path = folder.absoluteString
-        let json = folder.appendingPathComponent("Contents.json")
-        
-        if action == 1 {
+    func saveIosIconset(_ url: URL) {
+        let path = url.absoluteString
+        let json = url.appendingPathComponent("Contents.json")
+
+        DispatchQueue.main.async {
             // Generate Contents.json
             if let source = Bundle.main.url(forResource: "Contents_ios", withExtension: "json") {
                 try? FileManager.default.removeItem(at: json)           // Remove
                 try? FileManager.default.copyItem(at: source, to: json) // Create
             }
-            
             // Save ios icons
             self.image016A.image?.save(path + "iphone020pts2x.png")
             self.image016B.image?.save(path + "iphone020pts3x.png")
@@ -165,13 +185,20 @@ class ViewController: NSViewController {
             self.image512B.image?.save(path + "ipad076pts2x.png")
             self.image512A.image?.save(path + "ipad083pts1x.png")
             self.image512B.image?.save(path + "ipad083pts2x.png")
-        } else {
+        }
+
+    }
+    
+    func saveMacIconset(_ url: URL) {
+        let path = url.absoluteString
+        let json = url.appendingPathComponent("Contents.json")
+
+        DispatchQueue.main.async {
             // Generate Contents.json
             if let source = Bundle.main.url(forResource: "Contents_mac", withExtension: "json") {
                 try? FileManager.default.removeItem(at: json)           // Remove
                 try? FileManager.default.copyItem(at: source, to: json) // Create
             }
-            
             // Save mac icons
             self.image016A.image?.save(path + "mac016pts1x.png")
             self.image016B.image?.save(path + "mac016pts2x.png")
@@ -185,6 +212,7 @@ class ViewController: NSViewController {
             self.image512B.image?.save(path + "mac512pts2x.png")
         }
     }
+    
 }
 
 
@@ -210,20 +238,6 @@ extension NSImage {
         img.unlockFocus()
         
         return img
-    }
-    
-    @discardableResult
-    func saveToDownloads(_ name: String) -> Bool {
-        let folder = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
-        let url = folder.appendingPathComponent(name)
-
-        do {
-            try pngData?.write(to: url, options: .atomic)
-            return true
-        } catch {
-            print(error.localizedDescription)
-            return false
-        }
     }
 
     @discardableResult
