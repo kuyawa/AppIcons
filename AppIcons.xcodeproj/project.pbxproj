@@ -108,10 +108,9 @@
 			};
 			buildConfigurationList = F400636E1F05B3C30019C0FE /* Build configuration list for PBXProject "AppIcons" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
