@@ -768,7 +768,7 @@
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="GJk-ZR-lmD">
                                                 <font key="font" metaFont="system"/>
                                                 <string key="title">For better results use
-a 1024x1024 image</string>
+a 1024×1024 image</string>
                                                 <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
