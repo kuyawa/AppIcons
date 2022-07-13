@@ -1,6 +1,6 @@
 # AppIcon Generator for macOS and iOS
 
-AppIcons is a tool for generating icons in all sizes as required by macOS and iOS apps. Just select an image in 1024x1024 pixels and the app will generate all icons in normal and high resolution.
+AppIcons is a tool for generating icons in all sizes as required by macOS and iOS apps. Just select an image in 1024×1024 pixels and the app will generate all icons in normal and high resolution.
 
 ![Screenshot](https://raw.githubusercontent.com/kuyawa/Gallery/master/AppIcons/appicons.png)
 
